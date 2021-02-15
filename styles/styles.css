@@ -1,0 +1,863 @@
+@font-face {
+   font-family: 'Geometria';
+   font-style: normal;
+   font-weight: normal;
+   src: local('Geometria'),
+      url('../fonts/Geometria.woff') format('woff'),
+      url('../fonts/Geometria.ttf') format('ttf'),
+      url('../fonts/Geometria.eot') format('eot');
+}
+
+@font-face {
+   font-family: 'Geometria';
+   font-style: normal;
+   font-weight: 500;
+   src: local('Geometria'),
+      url('../fonts/Geometria-Medium.woff') format('woff'),
+      url('../fonts/Geometria-Medium.ttf') format('ttf'),
+      url('../fonts/Geometria-Medium.eot') format('eot');
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font: normal 14px/1 'Geometria', sans-serif;
+}
+
+a {
+   text-decoration: none;
+}
+
+.padding-site {
+   padding-left: 135px;
+   padding-right: 135px;
+}
+
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   background-color: #f2f4f7;
+}
+
+.header {
+   background-color: #fff;
+   padding-top: 16px;
+   padding-bottom: 16px;
+   display: flex;
+   min-height: 116px;
+   margin-bottom: 70px;
+}
+
+.logo {
+   margin-right: 35px;
+}
+
+.nav-header-links {
+   display: flex;
+}
+
+.header-link,
+.footer_right-nav-link {
+   list-style-type: none;
+   display: inline;
+   margin-right: 15px;
+}
+
+.header-link:hover {
+   border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+}
+
+.header-link-a {
+   color: #000000;
+   opacity: 0.5;
+   font-size: 18px;
+   line-height: 40px;
+}
+
+.header-link-a-active {
+   opacity: 1;
+   border-bottom: solid 1px #000000;
+   cursor: default;
+}
+
+.city-login-search {
+   min-width: 150px;
+   margin-left: 57px;
+}
+
+.city {
+   display: flex;
+}
+
+.city-icon {
+   opacity: 0.5;
+}
+
+.city-span {
+   line-height: 32px;
+   display: flex;
+   align-items: center;
+   color: #000000;
+   mix-blend-mode: normal;
+   opacity: 0.5;
+}
+
+.search {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+}
+
+.search:active {
+   color: green;
+}
+
+.search-login {
+   display: flex;
+   margin-top: 13px;
+}
+
+.login-button {
+   min-width: 90px;
+   height: 36px;
+   border: 1px solid #00D36D;
+   box-sizing: border-box;
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #00D36D;
+   cursor: pointer;
+   margin-left: 20px;
+}
+
+/* Styles for index.html only start*/
+.partners-categories {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 144px;
+   justify-content: center;
+}
+
+.partners-selector {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+}
+
+.partners-selector-item {
+   font-size: 18px;
+   line-height: 24px;
+   text-align: center;
+   color: #00D36D;
+   max-width: 113px;
+   cursor: pointer;
+}
+
+.partners-selector-item-active {
+   color: #000;
+}
+
+.partners-selector-select {
+   margin: 0 24px;
+   display: flex;
+   align-items: center;
+   background: #FFFFFF;
+   border: 1px solid #E4E6E9;
+   box-sizing: border-box;
+   border-radius: 12px;
+   width: 58px;
+   height: 24px;
+   padding: 3px 4px;
+   cursor: pointer;
+}
+
+.partners-selector-select-checkbox {
+   background: #00D36D;
+   height: 18px;
+   width: 18px;
+   border-radius: 50%;
+}
+
+.partners-categories-item {
+   background-color: #FFFFFF;
+   border-radius: 8px;
+   padding: 0 12px;
+   padding: 10px 20px;
+   text-align: center;
+   margin: 8px;
+   display: flex;
+   align-items: center;
+   font-size: 18px;
+   line-height: 24px;
+   cursor: pointer;
+}
+
+.partners-categories-item:hover {
+   box-shadow: 0 0 3px #00D36D;
+}
+
+.partners-categories-item-active {
+   background-color: #00D36D;
+   color: #FFFFFF;
+   cursor: default;
+}
+
+.partners-cards {
+   margin-top: 60px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.partners-card-item {
+   width: 218px;
+   height: 300px;
+   background-color: #FFFFFF;
+   border-radius: 8px;
+   cursor: pointer;
+   margin-bottom: 10px;
+}
+
+.partners-card-item:hover {
+   box-shadow: 0 0 3px #00D36D;
+}
+
+.partners-card-item-h4 {
+   margin-left: 20px;
+   margin-top: 20px;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 24px;
+   color: #000000;
+}
+
+.partners-card-item-h5 {
+   margin-top: 8px;
+   margin-left: 20px;
+   font-size: 12px;
+   line-height: 15px;
+   color: #000000;
+   opacity: 0.4;
+}
+
+.partners-card-item-image {
+   display: block;
+   margin: 27px auto 35px auto;
+   max-width: 120px;
+}
+
+.partners-card-item-name {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 20px;
+   text-align: center;
+   color: #000000;
+   opacity: 0.5;
+}
+
+.partners-card-more {
+   display: flex;
+   justify-content: center;
+   margin-top: 30px;
+}
+
+.more-button {
+   padding: 10px 20px;
+   background-color: #00D36D;
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 18px;
+   line-height: 23px;
+   color: #FFFFFF;
+}
+
+.offers-heading {
+   display: flex;
+   justify-content: center;
+   margin-top: 120px;
+}
+
+.offers-h2 {
+   display: block;
+   max-width: 715px;
+   font-weight: 500;
+   font-size: 32px;
+   line-height: 40px;
+   text-align: center;
+   color: #000000;
+}
+
+.offers-cards {
+   margin-top: 40px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.offers-card-item {
+   max-width: 377px;
+}
+
+.offers-card-item-partner {
+   margin-top: 15px;
+   display: flex;
+}
+
+.offers-card-item-partner-img {
+   height: 50px;
+   width: 50px;
+}
+
+.offers-card-item-name-offer {
+   margin-left: 15px;
+}
+
+.offers-card-item-name {
+   line-height: 20px;
+   opacity: 0.5;
+   color: #000000;
+}
+
+.offers-card-item-offer {
+   font-size: 18px;
+   line-height: 130%;
+   color: #000000;
+}
+
+.offers-cards-more {
+   display: flex;
+   justify-content: center;
+   margin-top: 60px;
+}
+
+.other_offers-line {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.other_offers-line1 {
+   margin-top: 120px;
+}
+
+.other_offers-oval {
+   background: #FFFFFF;
+   border-radius: 79px;
+   padding: 19px;
+   display: flex;
+}
+
+.other_offers-bonuses-item {
+   margin: 0 5px;
+   height: 120px;
+   position: relative;
+}
+
+.other_offers-bonuses-item-discount {
+   position: absolute;
+   height: 50px;
+   width: 50px;
+   background-color: black;
+   font-weight: bold;
+   font-size: 18px;
+   line-height: 24px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #FFFFFF;
+   border-radius: 50%;
+   top: -10px;
+   left: 60px;
+   ;
+}
+
+.other_offers-bonuses-img {
+   height: 120px;
+   width: 120px;
+}
+
+.other-offers-desc {
+   display: flex;
+}
+
+.other-offers-desc-background {
+   background-color: #FFFFFF;
+   border-radius: 0px 0px 30px 30px;
+   height: 42px;
+   padding: 0 20px;
+   display: flex;
+   align-items: center;
+}
+
+.other-offers-desc-radius {
+   width: 21px;
+   height: 21px;
+   overflow: hidden;
+   position: relative;
+}
+
+.other-offers-desc-radius:before {
+   content: "";
+   display: block;
+   width: 200%;
+   height: 200%;
+   position: absolute;
+   border-radius: 50%;
+}
+
+.other-offers-desc-left_radius:before {
+   top: 0;
+   left: -21px;
+   box-shadow: 10px -10px 0 0 #FFFFFF;
+}
+
+.other-offers-desc-right_radius:before {
+   top: 0;
+   left: 0;
+   box-shadow: -10px -10px 0 0 #FFFFFF;
+}
+
+.other-offers-desc-h6 {
+   font-size: 16px;
+   line-height: 20px;
+}
+
+.other_offers-line2 {
+   margin-top: 40px;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 279px;
+}
+
+.other_offers-line2-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center
+}
+
+.other_offers-line3 {
+   margin-top: 40px;
+}
+
+/* Styles for index.html only end*/
+
+/* Styles for action.html only start*/
+.main-category {
+   line-height: 20px;
+   text-align: center;
+   color: #7E7E7E;
+   margin-bottom: 21px;
+}
+
+.main-h1 {
+   font-size: 48px;
+   line-height: 52px;
+   text-align: center;
+   margin-bottom: 50px;
+}
+
+.content {
+   background: #FFFFFF;
+   border-radius: 30px 30px 8px 8px;
+}
+
+.content-cover {
+   height: 512px;
+   background: linear-gradient(90deg, #F76C55 0%, #DD599D 51.56%, #C250CD 100%);
+   border-radius: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.content-date {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 36px;
+   text-align: center;
+   color: #000000;
+   opacity: 0.5;
+   margin-bottom: 40px;
+}
+
+.content-text {
+   padding: 0 50px 50px 50px;
+   margin-bottom: 50px;
+}
+
+.content-text-h3,
+.content-text-howto-h3 {
+   font-size: 18px;
+   line-height: 27px;
+   margin-bottom: 14px;
+}
+
+.content-text-h3 {
+   font-weight: normal;
+}
+
+.content-text-advantages,
+.content-text-howto-steps {
+   margin-left: 46px;
+   margin-bottom: 40px;
+}
+
+.content-text-advantages-li,
+.content-text-howto-steps-li {
+   font-size: 18px;
+   line-height: 36px;
+}
+
+.content-text-howto-h3 {
+   font-weight: bold;
+}
+
+.content-text-text_block {
+   font-size: 18px;
+   line-height: 27px;
+   margin-bottom: 24px;
+}
+
+.span-bold {
+   font-weight: 700;
+}
+
+.content-text-more {
+   margin-bottom: 65px;
+}
+
+.content-text-more-a {
+   font-size: 18px;
+   line-height: 24px;
+   color: #00D36D;
+   border-bottom: 1px solid;
+}
+
+.content-text-terms {
+   font-size: 12px;
+   line-height: 18px;
+   opacity: 0.5;
+}
+
+.content-text-terms-link {
+   color: #00D36D;
+}
+
+.offices-card {
+   display: flex;
+   align-items: center;
+   margin-bottom: 50px;
+}
+
+.offices-card-name {
+   font-size: 28px;
+   line-height: 36px;
+   margin-left: 15px;
+}
+
+.offices-adress {
+   display: flex;
+   justify-content: space-between;
+}
+
+.offices-adress_card {
+   border: 1px dashed #000000;
+   box-sizing: border-box;
+   border-radius: 8px;
+   padding: 15px;
+   display: flex;
+   width: 377px;
+   height: 200px;
+}
+
+.offices-adress_card-active {
+   border: 1px solid #00D36D;
+}
+
+.offices-adress_card-logo-img {
+   height: 30px;
+   width: 30px;
+}
+
+.offices-adress_card-right {
+   margin-left: 15px;
+   font-size: 16px;
+   line-height: 24px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: inherit;
+}
+
+.offices-adress_card-metro {
+   display: flex;
+}
+
+.offices-adress_card-metro-item {
+   margin-right: 15px;
+}
+
+.offices-adress_card-phone-a {
+   color: #000000;
+}
+
+.offices-adress_card-site-a {
+   color: #00D36D;
+   border-bottom: 1px solid rgba(0, 211, 109, 0.3);
+}
+
+.offices-adress_card-route {
+   text-align: end;
+}
+
+.offices-adress_card-route-a {
+   font-size: 12px;
+   line-height: 18px;
+   color: #000000;
+   opacity: 0.3;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.offices-map {
+   margin-top: 50px;
+}
+
+/* Styles for action.html only end*/
+.footer {
+   margin-top: 173px;
+   background-color: #fff;
+   padding-top: 40px;
+   padding-bottom: 40px;
+   display: flex;
+}
+
+.footer_left-phone>a {
+   font-weight: 500;
+   font-size: 32px;
+   line-height: 40px;
+   color: #000000;
+}
+
+.footer-text {
+   line-height: 18px;
+   opacity: 0.5;
+}
+
+.footer_feft-logo {
+   margin-top: 55px;
+}
+
+.footer_left-copyright {
+   margin-top: 30px;
+   width: 201px;
+}
+
+.footer_right {
+   margin-left: 98px;
+}
+
+.footer_right-nav-link-a {
+   font-size: 18px;
+   line-height: 40px;
+   color: #000000;
+}
+
+.footer_right-line2 {
+   margin-top: 30px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.footer_right-line2-soc_links {
+   display: flex;
+}
+
+.footer_right-line2-soc_links-item {
+   margin-left: 10px;
+}
+
+.footer_right-line2-soc_links-item-img {
+   border-radius: 10px;
+}
+
+.footer_right-line3 {
+   margin-top: 30px;
+}
+
+.footer_right-line3-a {
+   text-decoration-line: underline;
+   color: #000000;
+}
+
+
+
+@media screen and (max-width: 1410px) {
+   .padding-site {
+      padding-left: 80px;
+      padding-right: 80px;
+   }
+
+   .other_offers-line2 {
+      padding: 0 200px;
+   }
+}
+
+@media screen and (max-width: 1290px) {
+   .offers-cards {
+      justify-content: space-around;
+   }
+
+   .offers-card-item {
+      margin-top: 10px;
+   }
+
+   .other_offers-line2 {
+      padding: 0 150px;
+   }
+
+   .offices-adress {
+      justify-content: space-around;
+      flex-wrap: wrap;
+   }
+
+   .offices-adress_card {
+      margin-bottom: 10px;
+   }
+}
+
+@media screen and (max-width: 1141px) {
+   .padding-site {
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   .other_offers-line2 {
+      flex-direction: column;
+   }
+
+   .other_offers-line2-item:last-child {
+      margin-top: 40px;
+   }
+
+   .partners-categories {
+      margin: 0 45px;
+   }
+}
+
+@media screen and (max-width: 1021px) {
+   .footer_left-copyright {
+      margin-top: 69px;
+   }
+}
+
+@media screen and (max-width: 920px) {
+   .partners-cards {
+      justify-content: center;
+   }
+
+   .partners-card-item {
+      margin: 0 10px 10px 10px;
+   }
+
+   .content-cover {
+      padding: 40px 0;
+      height: inherit;
+   }
+
+   .content-cover-img {
+      max-width: 95%;
+   }
+}
+
+@media screen and (max-width: 822px) {
+   .footer_left-copyright {
+      margin-top: 108px;
+   }
+}
+
+@media screen and (max-width: 802px) {
+   .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
+
+   .nav-header-links {
+      order: 2;
+   }
+
+   .footer_left-copyright {
+      margin-top: 130px;
+   }
+
+   .footer_right {
+      margin-left: 30px;
+   }
+
+   .footer_right-line2 {
+      flex-direction: column;
+   }
+
+   .footer_right-line2-markets {
+      display: flex;
+      justify-content: space-around;
+   }
+
+   .footer_right-line2-soc_links {
+      display: flex;
+      margin-top: 20px;
+      justify-content: center;
+   }
+
+}
+
+@media screen and (max-width: 754px) {
+   .footer_left-copyright {
+      margin-top: 170px;
+   }
+
+   .other_offers-oval {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100vw;
+   }
+}
+
+@media screen and (max-width: 625px) {
+   .footer_left-copyright {
+      margin-top: 210px;
+   }
+}
+
+@media screen and (max-width: 586px) {
+   .other-offers-desc-h6 {
+      text-align: center;
+   }
+
+   .footer_left-copyright {
+      margin-top: 250px;
+   }
+}
+
+@media screen and (max-width: 559px) {
+   .footer_left-copyright {
+      margin-top: 290px;
+   }
+}
+
+@media screen and (max-width: 511px) {
+   .footer_left-copyright {
+      margin-top: 372px;
+   }
+
+   .footer_right-line2-markets {
+      flex-direction: column;
+   }
+}
